@@ -8,7 +8,7 @@ if(!isset($_SESSION['idpengguna'])) header('location: ../');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../admin/admin.css">
+    <link rel="stylesheet" href="../include/style.css">
     <title>i-DaftarElektrik</title>
 </head>
 <body>
@@ -18,9 +18,8 @@ if(!isset($_SESSION['idpengguna'])) header('location: ../');
                 <td>i-DaftarElektrik&nbsp;&nbsp;&nbsp;</td>
                 <td>
                     <a href="index.php?menu=home" class="menu-button">HOME</a>
-                    <a href="index.php?menu=pelajar" class="menu-button">WARDEN</a>
+                    <a href="index.php?menu=warden" class="menu-button">WARDEN</a>
                     <a href="index.php?menu=peralatan" class="menu-button">PERALATAN</a>
-                    <a href="index.php?menu=pass" class="menu-button">RESET PASSWORD</a>
                     <a href="../logout.php" class="menu-button">LOGOUT</a>
                 </td>
             </tr>

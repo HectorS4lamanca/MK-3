@@ -1,30 +1,15 @@
 <?php
-
 require '../include/conn.php';
-$katalama = $_POST['katalama'];
-$katabaru = $_POST['katabaru'];
 
-$sql = 'SELECT kata FROM admin';
-$result = $conn->query($sql);
-if ($result->num_rows == 1) {
-    $row = $result->fetch_object();
-    if (password_verify($katalama, $row->kata)) {
-        $hashed = password_hash($katabaru, PASSWORD_BCRYPT);
-        $updatePass = "UPDATE admin SET kata = '$hashed'";
-        $conn->query($updatePass);
-        ?>
-        <script>
-            alert('Katalaluan berjaya dikemaskini. Sila log masuk semula.');
-            window.location = '../logout.php';
-        </script>
-        <?php
-    } else {
-        ?>
-        <script>
-            alert('Maaf. Katalaluan lama salah. Sila cuba lagi.')
-            window.location = 'index.php?menu=profile';
-        </script>
-        <?php
-    }
+$idwarden = $_GET['idwarden'];
+$sqlCheck = "SELECT * FROM warden WHERE idwarden = '$idwarden'";
+$result = $conn->query($sqlCheck);
+$row = $result->fetch_object();
 
-}
+$hashed = password_hash($row->nokpwarden, PASSWORD_BCRYPT);
+
+$sqlReset = "UPDATE warden SET kata = '$hashed' WHERE idwarden = '$idwarden'";
+$conn->query($sqlReset);
+
+header('location:index.php?menu=senarai_warden');
+?>

@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <table class="table">
             <tr>
                 <th>Bil</th>
-                <th>Nama Pelajar</th>
+                <th>Nama warden</th>
                 <th>Jenis Peralatan</th>
                 <th>Jenama</th>
                 <th>No Siri</th>
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 ?>
                 <tr>
                     <td><?php echo $bil++; ?></td>
-                    <td><?php echo $row->pelajar; ?></td>
+                    <td><?php echo $row->warden; ?></td>
                     <td><?php echo $row->jenisperalatan; ?></td>
                     <td><?php echo $row->jenama; ?></td>
                     <td><?php echo $row->nosiri; ?></td>

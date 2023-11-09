@@ -9,4 +9,4 @@ $warden = $_POST['warden'];
 $sql = "INSERT INTO warden VALUES(null, '$namawarden', '$nokpwarden','$kataWarden')";
 $conn->query($sql);
 
-header('location: index.php?menu=pelajar');
+header('location: index.php?menu=warden');

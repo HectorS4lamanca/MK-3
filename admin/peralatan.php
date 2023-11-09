@@ -158,11 +158,11 @@
             echo "<div class='result-container'>";
             echo "<h2>Equipment Details:</h2>";
             echo "<table class='result-table'>";
-            echo "<tr><th>ID.Pelajar</th><th>Nama Pelajar</th><th>Jenis Peralatan</th><th>Brand</th><th>No.Siri</th></tr>";
+            echo "<tr><th>ID.warden</th><th>Nama warden</th><th>Jenis Peralatan</th><th>Brand</th><th>No.Siri</th></tr>";
             while ($row = $result->fetch_object()) {
                 echo "<tr>";
                 echo "<td>" . $row->idperalatan . "</td>";
-                echo "<td>" . $row->pelajar . "</td>";
+                echo "<td>" . $row->warden . "</td>";
                 echo "<td>" . $row->jenisperalatan . "</td>";
                 echo "<td>" . $row->jenama . "</td>";
                 echo "<td>" . $row->nosiri . "</td>";
