@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Admin</title>
+    <title>Warden</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -206,7 +206,6 @@
             <th>Id</th>
             <th>Nama Warden</th>
             <th>No.KP Warden</th>
-            <th>Kata Warden</th>
             <th>Kemaskini</th>
         </tr>
         <?php
@@ -218,7 +217,6 @@
                 <td><?php echo $row->idwarden;?></td>
                 <td><?php echo $row->namawarden; ?></td>
                 <td><?php echo $row->nokpwarden; ?></td>
-                <td><?php echo $row->kata; ?></td>
                 <td class="table-actions">
                     <a href="index.php?menu=pelajar&edit=<?php echo $row->idwarden; ?>">Edit</a>
                     <a href="padam.php?idwarden=<?php echo $row->idwarden; ?>" onclick="return sahkan()">Padam</a>

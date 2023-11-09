@@ -54,6 +54,7 @@ if(!isset($_SESSION['idpengguna'])) header('location: ../');
                     <a href="index.php?menu=home" class="menu-button">HOME</a>
                     <a href="index.php?menu=pelajar" class="menu-button">WARDEN</a>
                     <a href="index.php?menu=peralatan" class="menu-button">PERALATAN</a>
+                    <a href="index.php?menu=pass" class="menu-button">RESET PASSWORD</a>
                     <a href="../logout.php" class="menu-button">LOGOUT</a>
                 </td>
             </tr>
