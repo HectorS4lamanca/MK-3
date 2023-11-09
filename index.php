@@ -1,38 +1,20 @@
-<?php
-require '../conn.php';
-if(!isset($_SESSION['idpengguna'])) header('location: ../');
-?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../admin/style.css">
-    <title>i-DaftarElektrik</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="../penperel/style.css">
 </head>
 <body>
-    <header>
-        <table>
-            <tr>    
-                <td>i-DaftarElektrik&nbsp;&nbsp;&nbsp;</td>
-                <td>
-                    <a href="index.php?menu=home" class="menu-button">HOME</a>
-                    <a href="index.php?menu=pelajar" class="menu-button">WARDEN</a>
-                    <a href="index.php?menu=peralatan" class="menu-button">PERALATAN</a>
-                    <a href="index.php?menu=pass" class="menu-button">RESET PASSWORD</a>
-                    <a href="../logout.php" class="menu-button">LOGOUT</a>
-                </td>
-            </tr>
-        </table>
-    </header>
-
-    <?php
-    $menu = 'home'; 
-    if(isset($_GET['menu'])){
-        $menu=$_GET['menu'];
-    }
-    include "$menu.php";
-    ?>
+    <div class="container">
+        <h1>Sistem Pendaftaran Peralatan Elektrik</h1>
+        <h3>Log Masuk</h3>
+        <form action="login.php" method="post">
+            <label for="idpengguna">ID:</label>
+            <input type="text" name="idpengguna" id="idpengguna" required><br><br>
+            <label for="kata">Kata Laluan:</label>
+            <input type="password" name="kata" id="kata" required><br><br>
+            <button type="submit">MASUK</button>
+        </form>
+    </div>
 </body>
 </html>
