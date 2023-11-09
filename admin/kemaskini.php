@@ -14,7 +14,7 @@ if (isset($_POST['idwarden'], $_POST['namawarden'], $_POST['nokpwarden'], $_POST
     $stmt->bind_param("sssi", $namawarden, $nokpwarden, $kata, $idwarden);
 
     if ($stmt->execute()) {
-        header('location: index.php?menu=pelajar');
+        header('location: index.php?menu=warden');
     } else {
         echo "Update failed: " . $stmt->error;
     }
