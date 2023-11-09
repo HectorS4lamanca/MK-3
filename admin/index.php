@@ -8,42 +8,8 @@ if(!isset($_SESSION['idpengguna'])) header('location: ../');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../admin/admin.css">
     <title>i-DaftarElektrik</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        .menu {
-            text-align: center;
-            padding: 10px 0;
-        }
-
-        .menu-button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            text-decoration: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .menu-button:hover {
-            background-color: #0056b3;
-        }
-    </style>
 </head>
 <body>
     <header>
